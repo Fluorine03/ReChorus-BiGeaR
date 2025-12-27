@@ -1,0 +1,121 @@
+Namespace(model_name='BiGeaR_LightGCN_v2', model_mode='')
+--------------------------------------------- BEGIN: 2025-12-12 11:16:47 ---------------------------------------------
+
+===========================================
+ Arguments          | Values               
+===========================================
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 200                 
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ l2                 | 1e-06               
+ lambda_decay       | 0.1                 
+ lambda_id          | 1.0                 
+ lr                 | 0.001               
+ main_metric        |                     
+ n_layers           | 2                   
+ norm_a             | 1.0                 
+ num_neg            | 1                   
+ num_workers        | 5                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ stage              | 2                   
+ teacher_model_path | /home/ReChorus/re...
+ test_all           | 0                   
+ top_r              | 100                 
+ topk               | 5,10,20,50          
+===========================================
+Device: cuda
+Load corpus from data/Grocery_and_Gourmet_Food/BaseReader.pkl
+#params: 1497344
+BiGeaR_LightGCN_v2(
+  (user_embedding): Embedding(14682, 64)
+  (item_embedding): Embedding(8714, 64)
+  (quant_layer): QuantLayer()
+  (teacher_user_emb): Embedding(14682, 64)
+  (teacher_item_emb): Embedding(8714, 64)
+)
+Test Before Training: (NDCG@5:0.2430,NDCG@10:0.2820,NDCG@20:0.3111,NDCG@50:0.3525)
+Optimizer: Adam
+Epoch 1     loss=0.1952 [10.7 s]	dev=(NDCG@5:0.2986) [0.3 s] *
+Epoch 2     loss=0.1784 [10.5 s]	dev=(NDCG@5:0.3042) [0.3 s] *
+Epoch 3     loss=0.1713 [10.3 s]	dev=(NDCG@5:0.3046) [0.3 s] *
+Epoch 4     loss=0.1655 [10.3 s]	dev=(NDCG@5:0.3068) [0.4 s] *
+Epoch 5     loss=0.1633 [10.1 s]	dev=(NDCG@5:0.3074) [0.3 s] *
+Epoch 6     loss=0.1608 [10.1 s]	dev=(NDCG@5:0.3068) [0.3 s]
+Epoch 7     loss=0.1599 [10.3 s]	dev=(NDCG@5:0.3098) [0.3 s] *
+Epoch 8     loss=0.1584 [10.3 s]	dev=(NDCG@5:0.3107) [0.3 s] *
+Epoch 9     loss=0.1577 [10.4 s]	dev=(NDCG@5:0.3120) [0.3 s] *
+Epoch 10    loss=0.1578 [10.3 s]	dev=(NDCG@5:0.3128) [0.3 s] *
+Epoch 11    loss=0.1568 [10.2 s]	dev=(NDCG@5:0.3134) [0.4 s] *
+Epoch 12    loss=0.1561 [10.2 s]	dev=(NDCG@5:0.3130) [0.4 s]
+Epoch 13    loss=0.1557 [10.0 s]	dev=(NDCG@5:0.3145) [0.3 s] *
+Epoch 14    loss=0.1557 [10.4 s]	dev=(NDCG@5:0.3149) [0.4 s] *
+Epoch 15    loss=0.1538 [10.1 s]	dev=(NDCG@5:0.3154) [0.3 s] *
+Epoch 16    loss=0.1552 [10.4 s]	dev=(NDCG@5:0.3158) [0.3 s] *
+Epoch 17    loss=0.1549 [10.3 s]	dev=(NDCG@5:0.3156) [0.4 s]
+Epoch 18    loss=0.1560 [10.4 s]	dev=(NDCG@5:0.3160) [0.3 s] *
+Epoch 19    loss=0.1553 [10.5 s]	dev=(NDCG@5:0.3161) [0.3 s] *
+Epoch 20    loss=0.1542 [10.3 s]	dev=(NDCG@5:0.3148) [0.3 s]
+Epoch 21    loss=0.1539 [10.5 s]	dev=(NDCG@5:0.3163) [0.3 s] *
+Epoch 22    loss=0.1527 [10.1 s]	dev=(NDCG@5:0.3171) [0.4 s] *
+Epoch 23    loss=0.1528 [9.7 s]	dev=(NDCG@5:0.3165) [0.3 s]
+Epoch 24    loss=0.1531 [10.3 s]	dev=(NDCG@5:0.3162) [0.4 s]
+Epoch 25    loss=0.1526 [10.3 s]	dev=(NDCG@5:0.3156) [0.3 s]
+Epoch 26    loss=0.1547 [10.4 s]	dev=(NDCG@5:0.3154) [0.4 s]
+Epoch 27    loss=0.1541 [10.3 s]	dev=(NDCG@5:0.3158) [0.4 s]
+Epoch 28    loss=0.1538 [10.3 s]	dev=(NDCG@5:0.3154) [0.4 s]
+Epoch 29    loss=0.1533 [10.4 s]	dev=(NDCG@5:0.3160) [0.4 s]
+Epoch 30    loss=0.1530 [9.7 s]	dev=(NDCG@5:0.3163) [0.4 s]
+Epoch 31    loss=0.1526 [9.7 s]	dev=(NDCG@5:0.3172) [0.4 s] *
+Epoch 32    loss=0.1538 [10.6 s]	dev=(NDCG@5:0.3173) [0.3 s] *
+Epoch 33    loss=0.1526 [10.4 s]	dev=(NDCG@5:0.3184) [0.3 s] *
+Epoch 34    loss=0.1522 [10.5 s]	dev=(NDCG@5:0.3194) [0.3 s] *
+Epoch 35    loss=0.1524 [10.3 s]	dev=(NDCG@5:0.3190) [0.3 s]
+Epoch 36    loss=0.1531 [10.4 s]	dev=(NDCG@5:0.3189) [0.3 s]
+Epoch 37    loss=0.1520 [10.2 s]	dev=(NDCG@5:0.3184) [0.3 s]
+Epoch 38    loss=0.1535 [10.3 s]	dev=(NDCG@5:0.3186) [0.3 s]
+Epoch 39    loss=0.1521 [10.4 s]	dev=(NDCG@5:0.3197) [0.4 s] *
+Epoch 40    loss=0.1520 [10.4 s]	dev=(NDCG@5:0.3194) [0.3 s]
+Epoch 41    loss=0.1520 [10.3 s]	dev=(NDCG@5:0.3187) [0.4 s]
+Epoch 42    loss=0.1533 [10.3 s]	dev=(NDCG@5:0.3197) [0.3 s] *
+Epoch 43    loss=0.1519 [10.2 s]	dev=(NDCG@5:0.3189) [0.3 s]
+Epoch 44    loss=0.1516 [10.5 s]	dev=(NDCG@5:0.3198) [0.3 s] *
+Epoch 45    loss=0.1516 [10.4 s]	dev=(NDCG@5:0.3191) [0.3 s]
+Epoch 46    loss=0.1533 [10.4 s]	dev=(NDCG@5:0.3198) [0.3 s]
+Epoch 47    loss=0.1527 [10.0 s]	dev=(NDCG@5:0.3199) [0.3 s] *
+Epoch 48    loss=0.1517 [10.4 s]	dev=(NDCG@5:0.3206) [0.4 s] *
+Epoch 49    loss=0.1523 [10.4 s]	dev=(NDCG@5:0.3205) [0.4 s]
+Epoch 50    loss=0.1522 [10.4 s]	dev=(NDCG@5:0.3213) [0.3 s] *
+Epoch 51    loss=0.1538 [10.4 s]	dev=(NDCG@5:0.3216) [0.4 s] *
+Epoch 52    loss=0.1521 [10.3 s]	dev=(NDCG@5:0.3216) [0.3 s]
+Epoch 53    loss=0.1530 [10.3 s]	dev=(NDCG@5:0.3221) [0.4 s] *
+Epoch 54    loss=0.1515 [10.0 s]	dev=(NDCG@5:0.3215) [0.3 s]
+Epoch 55    loss=0.1527 [9.7 s]	dev=(NDCG@5:0.3217) [0.3 s]
+Epoch 56    loss=0.1519 [9.6 s]	dev=(NDCG@5:0.3211) [0.3 s]
+Epoch 57    loss=0.1522 [10.2 s]	dev=(NDCG@5:0.3213) [0.3 s]
+Epoch 58    loss=0.1510 [10.3 s]	dev=(NDCG@5:0.3213) [0.3 s]
+Epoch 59    loss=0.1518 [10.2 s]	dev=(NDCG@5:0.3209) [0.4 s]
+Epoch 60    loss=0.1521 [10.3 s]	dev=(NDCG@5:0.3216) [0.4 s]
+Epoch 61    loss=0.1540 [10.4 s]	dev=(NDCG@5:0.3211) [0.3 s]
+Epoch 62    loss=0.1521 [10.2 s]	dev=(NDCG@5:0.3213) [0.3 s]
+Early stop at 62 based on dev result.
+
+Best Iter(dev)=   53	 dev=(NDCG@5:0.3221) [660.2 s] 
+Load model from /home/ReChorus/record/BiGeaR_LightGCN_v2/controlled_stage2_models/BiGeaR_LightGCN_v2__Grocery_and_Gourmet_Food__seed0__lr=0.001__l2=1e-06__emb_size=64__n_layers=2__stage=2__lambda_id=1.0__top_r=100.pt
+
+Dev  After Training: (NDCG@5:0.3221,NDCG@10:0.3608,NDCG@20:0.3884,NDCG@50:0.4222)
+
+Test After Training: (NDCG@5:0.2601,NDCG@10:0.3005,NDCG@20:0.3289,NDCG@50:0.3691)
+Saving top-100 recommendation results to: ../log/BiGeaR_LightGCN_v2/BiGeaR_LightGCN_v2__Grocery_and_Gourmet_Food__0__lr=0/rec-BiGeaR_LightGCN_v2-dev.csv
+dev Prediction results saved!
+Saving top-100 recommendation results to: ../log/BiGeaR_LightGCN_v2/BiGeaR_LightGCN_v2__Grocery_and_Gourmet_Food__0__lr=0/rec-BiGeaR_LightGCN_v2-test.csv
+test Prediction results saved!
+
+--------------------------------------------- END: 2025-12-12 11:28:00 ---------------------------------------------
